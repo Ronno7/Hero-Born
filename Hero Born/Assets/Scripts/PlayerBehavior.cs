@@ -11,17 +11,20 @@ public class PlayerBehavior : MonoBehaviour
     public LayerMask GroundLayer;
     public GameObject Bullet;
     public float BulletSpeed = 100f;
+
     private float _vInput;
     private float _hInput;
     private Rigidbody _rb;
     private bool _isJumping;
     private CapsuleCollider _col;
     private bool _isShooting;
+    private GameBehavior _gameManager;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
         _col = GetComponent<CapsuleCollider>();
+        _gameManager = GameObject.Find("Game Manager").GetComponent<GameBehavior>();
     }
     void Update()
     {
@@ -51,7 +54,7 @@ public class PlayerBehavior : MonoBehaviour
         }
         if (_isShooting)
         {
-            GameObject newBullet = Instantiate(Bullet, this.transform.position + new Vector3(0, 0, 1), this.transform.rotation);
+            GameObject newBullet = Instantiate(Bullet, this.transform.position + this.transform.forward, this.transform.rotation * Quaternion.Euler(90, 0, 0));
             Rigidbody BulletRB = newBullet.GetComponent<Rigidbody>();
             BulletRB.velocity = this.transform.forward * BulletSpeed;
         }
@@ -62,5 +65,13 @@ public class PlayerBehavior : MonoBehaviour
         Vector3 capsuleBottom = new Vector3(_col.bounds.center.x, _col.bounds.min.y, _col.bounds.center.z);
         bool grounded = Physics.CheckCapsule(_col.bounds.center,capsuleBottom, DistanceToGround, GroundLayer,QueryTriggerInteraction.Ignore);
         return grounded;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name == "Enemy")
+        { 
+            _gameManager.HP -= 1;
+        }
     }
 }

@@ -4,16 +4,25 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using CustomExtensions;
 
-public class GameBehavior : MonoBehaviour
+public class GameBehavior : MonoBehaviour, IManager
 {
+    private string _state;
     private int _playerHP = 10;
+
     public int MaxItems = 4;
     public Button WinButton;
     public Button LossButton;
     public TMP_Text HealthText;
     public TMP_Text ItemText;
     public TMP_Text ProgressText;
+
+    public string State
+    { 
+        get { return _state; }
+        set { _state = value; }
+    }
 
     public void UpdateScene(string updatedText)
     {
@@ -25,6 +34,14 @@ public class GameBehavior : MonoBehaviour
     {
         ItemText.text += _itemsCollected;
         HealthText.text += _playerHP;
+        Initialize();
+    }
+
+    public void Initialize()
+    {
+        _state = "Game Manager initialized..";
+        _state.FancyDebug();
+        Debug.Log(_state);
     }
 
     private int _itemsCollected = 0;
@@ -47,11 +64,7 @@ public class GameBehavior : MonoBehaviour
 
         }
     }
-    public void RestartScene()
-    {
-        SceneManager.LoadScene(0);
-        Time.timeScale = 1f;
-    }
+
     public int HP
     {
         get { return _playerHP; }
@@ -67,5 +80,10 @@ public class GameBehavior : MonoBehaviour
                 ProgressText.text = "Ouch... that's got to hurt.";
             }
             Debug.LogFormat("Lives: {0}", _playerHP); }
+    }
+
+    public void RestartScene()
+    {
+        Utilities.RestartLevel(0);
     }
 }

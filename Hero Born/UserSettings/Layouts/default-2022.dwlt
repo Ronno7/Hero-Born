@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Console
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 95
+  controlID: 98
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 52
+  controlID: 44
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 43
+  controlID: 45
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -377,9 +377,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 10}
-    m_SelectedIDs: 925b0000
-    m_LastClickedID: 23442
-    m_ExpandedIDs: 000000007e5b0000905b000000ca9a3b
+    m_SelectedIDs: 245c0000
+    m_LastClickedID: 23588
+    m_ExpandedIDs: 000000000e5c0000105c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -407,7 +407,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007e5b0000
+    m_ExpandedIDs: 000000000e5c0000105c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -432,8 +432,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 2efbffff
-    m_LastClickedInstanceID: -1234
+    m_SelectedInstanceIDs: 585c0000
+    m_LastClickedInstanceID: 23640
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -549,7 +549,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 84d7ffffd0d7ffff3adaffff4cdefffff4efffff30fbffff245a0000765a0000
+      m_ExpandedIDs: 02ecffff4eecffffc4eeffff30fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1033,9 +1033,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 12.99532, y: 7.2492275, z: 5.820826}
+    m_Target: {x: -149.35263, y: -939.69507, z: 1491.439}
     speed: 2
-    m_Value: {x: 12.99532, y: 7.2492275, z: 5.820826}
+    m_Value: {x: -149.35263, y: -939.69507, z: 1491.439}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1081,20 +1081,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.21214484, y: -0.75555277, z: 0.293761, w: 0.5456719}
+    m_Target: {x: 0.27819246, y: -0.049261738, z: 0.0142975105, w: 0.9591005}
     speed: 2
-    m_Value: {x: 0.21215346, y: -0.75558347, z: 0.29377294, w: 0.54569405}
+    m_Value: {x: 0.27820694, y: -0.0492643, z: 0.014298255, w: 0.9591504}
   m_Size:
-    m_Target: 7.1177306
+    m_Target: 887.55676
     speed: 2
-    m_Value: 7.1177306
+    m_Value: 887.55676
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 1.7001503
-    m_SpeedNormalized: 0.85000014
+    m_Speed: 0.6206909
+    m_SpeedNormalized: 0.31000045
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
